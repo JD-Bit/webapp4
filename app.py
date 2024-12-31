@@ -3,6 +3,14 @@ from pathlib import Path
 
 st.set_page_config(page_title="Happy New Year!", page_icon="🥳")
 
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 THIS_DIR = Path(__file__).parent
 page2k25 = THIS_DIR / "views" / "2025.py"
 page2k24 = THIS_DIR / "views" / "2024.py"
